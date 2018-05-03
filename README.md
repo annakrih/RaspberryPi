@@ -40,10 +40,21 @@ The steps to get the OS to the SD cards are the following:
 * Open Ether and insert an SD card to your own computer
 * In Ether, choose the .img image file for the OS, the SD card, and then click **Flash!**
 
-##### Change the keyboard layout of the OS
+##### Change the keyboard layout of the OS Þarf að fara yfir og laga!!
+The keyboard language was changed by following these steps:
+1. Run the command ``` sudo raspi-config ```
+2. Navigate to option number 4. Localisation Options
+3. Keyboard Layout (?)
+4. Pick the keyboard layout that is already selected
+5. Pick other
+6. Pick Icelandic
+7. Select ok to everything untill first page pops up again
+8. Navigate down to the finish button, go to lowest and then press right arrow to select lowest options 
+
+The reason for changing the keyboard was to make working on the Raspberry Pi's easier, we were working with an Icelandic keyboard so it became necisarry for us to change it. To change the keyboard back the same steps can be made but by selecting the desired keyboard language
 ##### Change the name of the RP
-#### Connect each RP to internet
-#### Dowload docker to each RP
+##### Connect each RP to internet
+##### Dowload docker to each RP
 
 
 
