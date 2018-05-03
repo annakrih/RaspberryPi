@@ -61,6 +61,15 @@ The names of the RP's were changed with the following steps:
 5. Reboot 
 ##### Connect each RP to internet
 ##### Dowload docker to each RP
+To download Docker the RP's need to have access to the internet, then the following commands need to be run:
+
+``` curl -sSL https://get.docker.com | sh ```
+
+``` sudo usermod -a -G docker &USER ```
+
+``` sudo reboot ``` or ``` reboot ```
+
+Repeat on all RP's.
 
 
 
