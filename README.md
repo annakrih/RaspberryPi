@@ -60,6 +60,30 @@ The names of the RP's were changed with the following steps:
 4. Run command ``` sudo nano /etc/hostname ```, and repeat step 3.
 5. Reboot 
 ##### Connect each RP to internet
+To be able to instal Docker to the RP (which is the next step), we must first connect it to the internet. To do this we were not able to use the university's network, since we couldn't find information on how to sign into a network with username and password. This section describes how to connect an internet with WPA2 security protocol with a network name and password. We connected the RP to hotspots on our phones, but a basic router would also work. 
+
+1. Run the command:
+``` 
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf 
+```
+2. A file opens. Be careful not to change what is in in already, but add beneath it the following
+```
+network={
+  ssid="Network Name"
+	psk="Password"
+}
+```
+    Where the `Network Name` and `Password` are the same as what you would use if you were connecting to the network normally. 
+3. Run the commands:
+``` 
+wpa_cli -i wlan0 reconfigure
+ifconfig wlan0
+``` 
+
+
+*If more infomation is needed, we used [this](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md 
+) information*
+
 ##### Dowload docker to each RP
 To download Docker the RP's need to have access to the internet, then the following commands need to be run:
 
