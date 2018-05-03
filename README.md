@@ -99,7 +99,7 @@ To download Docker the RP's need to have access to the internet, then the follow
 
 Repeat on all RP's.
 
-##### Make a docker swarm
+#### &nbsp;&nbsp;&nbsp;&nbsp; 1.6 Make a docker swarm
 On the node or RP that should be the master or leader run the following command:
 
 ``` docker swarm init ```
