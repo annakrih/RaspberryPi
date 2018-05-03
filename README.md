@@ -1,8 +1,6 @@
 
 <img src="/RUlogo.png" width="200"/>
-
-
-A 3 week course project at Reykjavík University, Spring 2018. 
+Spring 2018 
 
 **Students**:  
 Anna Kristín Halldórsdóttir (annah14@ru.is)  
@@ -14,7 +12,6 @@ Birna Vala Eyjólfsdóttir (birna14@ru.is)
 Mohammad Hamdaqa
 
 # Raspberry Pi Cluster
-
 *A fully fledged miniature cloud datacenter that supports running microservices and serverless applications using a Raspberry cluster.*
 
 
