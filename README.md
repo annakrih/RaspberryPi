@@ -53,7 +53,12 @@ The keyboard language was changed by following these steps:
 
 The reason for changing the keyboard was to make working on the Raspberry Pi's easier, we were working with an Icelandic keyboard so it became necisarry for us to change it. To change the keyboard back the same steps can be made but by selecting the desired keyboard language
 ##### Change the name of the RP
-
+The names of the RP's were changed with the following steps:
+1. Set up and run the RP that you want to change the name of
+2. Run the command ``` sudo nano /etc/hosts ```
+3. There you change the name to what you want it to be, in our case it was RPC-MASTER, RPC-NODE1, etc.
+4. Run command ``` sudo nano /etc/hostname ```, and repeat step 3.
+5. Reboot 
 ##### Connect each RP to internet
 To be able to instal Docker to the RP (which is the next step), we must first connect it to the internet. To do this we were not able to use the university's network, since we couldn't find information on how to sign into a network with username and password. This section describes how to connect an internet with WPA2 security protocol with a network name and password. We connected the RP to hotspots on our phones, but a basic router would also work. 
 
@@ -80,6 +85,15 @@ ifconfig wlan0
 ) information*
 
 ##### Dowload docker to each RP
+To download Docker the RP's need to have access to the internet, then the following commands need to be run:
+
+``` curl -sSL https://get.docker.com | sh ```
+
+``` sudo usermod -a -G docker &USER ```
+
+``` sudo reboot ``` or ``` reboot ```
+
+Repeat on all RP's.
 
 
 
