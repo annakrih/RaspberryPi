@@ -29,6 +29,7 @@ There is quite a lot of setup needef or each machine. In this section we will di
 - [ ] Change the name of the RP
 - [ ] Connect each RP to internet so that we can...
 - [ ] ... dowload docker to each RP
+- [ ] ... and make swarm
 
 ##### Get an operating system to the SD memory card
 There are various [OS that can be setup on a Raspberry Pi](https://www.raspberrypi.org/downloads/), we chose to use Rasbian. Rasbian is a version of the [Debian](https://en.wikipedia.org/wiki/Debian) which is a Unix-like operating system. We also choose to use the version of Rasbian without a desktop, that is Rasbian Stretch Lite. 
@@ -71,6 +72,28 @@ To download Docker the RP's need to have access to the internet, then the follow
 
 Repeat on all RP's.
 
+##### Make a docker swarm
+On the node or RP that should be the master or leader run the following command:
+
+``` docker swarm init ```
+
+Then a message should appear that tells you what the token to add other RP's, or you can at any time run the command:
+
+``` docker swarm join-token worker ```
+
+A message with the token should appear, this token is needed to join the other nodes or RP's to the swarm, as well as the IP address of the master. The IP address can be optained by running:
+
+``` hostname -I ```
+
+To join the other RP's to the swarm the following command needs to be run on each of them, TOKEN stands for the token optained from the master and IP-ADDRESS is the IP address of the master:
+
+``` docker swarm join --token TOKEN IP-ADDRESS:2377 ```
+
+2377 is the port and should be the same in most cases.
+
+Promoting a node to be a manager is a good security mesure, if the master RP goes offline the manager becomes the new master. To promote a node to manager you need run the following command on the master,(NAMEOFNODE should be the name of the node that should be promoted, e.g., RPC-NODE1, RPC-NODE2, etc):
+
+``` docker node promote NAMEOFNODE ``` 
 
 
 
