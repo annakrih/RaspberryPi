@@ -1,6 +1,6 @@
 
+Spring 2018  
 <img src="/RUlogo.png" width="200"/>
-Spring 2018 
 
 **Students**:  
 Anna Kristín Halldórsdóttir (annah14@ru.is)  
