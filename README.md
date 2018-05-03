@@ -23,9 +23,14 @@ Mohammad Hamdaqa
 
 ### Initial setup of each RP
 There is quite a lot of setup needef or each machine. In this section we will discuss what needs to be done on each and every RP machine to set it up. In short it is the following: 
-- [ ] Get an operating system to the SD memory card
-- [ ] sdf
 
+- [ ] Get an operating system to the SD memory card - We used Rasbian
+- [ ] Change the keyboard layout of the OS
+- [ ] Change the name of the RP
+- [ ] Connect each RP to internet
+- [ ] Dowload docker to each RP
+
+##### Get an operating system to the SD memory card
 Flasha image á SD kortin
 Farið eftir þessum leiðbeiningum:
 https://www.raspberrypi.org/documentation/installation/installing-images/README.md 
@@ -35,6 +40,12 @@ SD kort sett í tölvuna. Opna Etcher og velja image-ið og SD kortið og flasha
 Á meðan kortið er í tölvunni, gefa því nafn með því að rename SD kortin sjálf. Við notuðum nöfnin: 
 RPC-MASTER, 
 RPC-NODE1, RPC-NODE2, RPC-NODE3, RPC-NODE4, RPC-NODE5, RPC-NODE6, RPC-NODE7
+##### Change the keyboard layout of the OS
+##### Change the name of the RP
+#### Connect each RP to internet
+#### Dowload docker to each RP
+
+
 
 
 ## Discussion 
