@@ -53,6 +53,12 @@ The keyboard language was changed by following these steps:
 
 The reason for changing the keyboard was to make working on the Raspberry Pi's easier, we were working with an Icelandic keyboard so it became necisarry for us to change it. To change the keyboard back the same steps can be made but by selecting the desired keyboard language
 ##### Change the name of the RP
+The names of the RP's were changed with the following steps:
+1. Set up and run the RP that you want to change the name of
+2. Run the command ``` sudo nano /etc/hosts ```
+3. There you change the name to what you want it to be, in our case it was RPC-MASTER, RPC-NODE1, etc.
+4. Run command ``` sudo nano /etc/hostname ```, and repeat step 3.
+5. Reboot 
 ##### Connect each RP to internet
 ##### Dowload docker to each RP
 
