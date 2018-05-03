@@ -40,7 +40,18 @@ SD kort sett í tölvuna. Opna Etcher og velja image-ið og SD kortið og flasha
 Á meðan kortið er í tölvunni, gefa því nafn með því að rename SD kortin sjálf. Við notuðum nöfnin: 
 RPC-MASTER, 
 RPC-NODE1, RPC-NODE2, RPC-NODE3, RPC-NODE4, RPC-NODE5, RPC-NODE6, RPC-NODE7
-##### Change the keyboard layout of the OS
+##### Change the keyboard layout of the OS Þarf að fara yfir og laga!!
+The keyboard language was changed by following these steps:
+1. Run the command ``` sudo raspi-config ```
+2. Navigate to option number 4. Localisation Options
+3. Keyboard Layout (?)
+4. Pick the keyboard layout that is already selected
+5. Pick other
+6. Pick Icelandic
+7. Select ok to everything untill first page pops up again
+8. Navigate down to the finish button, go to lowest and then press right arrow to select lowest options 
+
+The reason for changing the keyboard was to make working on the Raspberry Pi's easier, we were working with an Icelandic keyboard so it became necisarry for us to change it. To change the keyboard back the same steps can be made but by selecting the desired keyboard language
 ##### Change the name of the RP
 #### Connect each RP to internet
 #### Dowload docker to each RP
